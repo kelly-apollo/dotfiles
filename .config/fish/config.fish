@@ -12,6 +12,7 @@ function reload
 end
 
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias config="vim ~/.config/fish/config.fish"
 
 
 set normal (set_color normal)
