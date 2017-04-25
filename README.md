@@ -1,3 +1,3 @@
-# oh-my-dotfiles
+# Oh-my-dotfiles
 
 ✂️ cut your config
