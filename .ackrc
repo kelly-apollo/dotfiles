@@ -1,0 +1,4 @@
+ --ignore-dir=venv
+ --ignore-dir=node_modules
+ --ignore-dir=.git
+ --ignore-dir=CACHE

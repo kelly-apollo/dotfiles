@@ -1,0 +1,30 @@
+[user]
+	name = Kelly
+	email = nagisa.fff@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+
+# git mergetool
+[merge]
+	tool = opendiff
+
+# correct typos
+[help]
+	autocorrect = 1
+
+# push easily. http://stackoverflow.com/a/23918418/89484
+[push]
+	default = current
+
+# use separate file for username / github token / etc
+[include]
+  path = ~/.gitconfig.local
+
+[init]
+	templatedir = ~/.git_template
+
+[gitopen "gitlab"]
+	domain = gitlab.gizwits.com
+[color]
+	ui = auto
