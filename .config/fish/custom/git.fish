@@ -12,17 +12,17 @@ alias gd="git diff"
 alias gcm="git checkout master"
 
 function gq
-    git add -A
-    git commit -a -m $argv
+  git add -A
+  git commit -a -m $argv
 end
 
 function gcd
-    git checkout .
-    git clean -df
+  git checkout .
+  git clean -df
 end
 
 function gco
-    git checkout $argv
+  git checkout $argv
 end
 
 function gcot

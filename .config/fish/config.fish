@@ -1,5 +1,6 @@
 # tool
 source ~/.config/fish/custom/git.fish
+source ~/.config/fish/custom/work.fish
 source ~/.config/fish/custom/shortcut.fish
 
 set -U FZF_TMUX 0
