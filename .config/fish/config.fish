@@ -14,7 +14,10 @@ end
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias em="emacs -nw"
 alias config="vim ~/.config/fish/config.fish"
-
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+    --cache=$HOME/.npm/.cache/cnpm \
+    --disturl=https://npm.taobao.org/dist \
+    --userconfig=$HOME/.cnpmrc"
 
 set normal (set_color normal)
 set magenta (set_color magenta)
