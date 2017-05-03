@@ -22,7 +22,6 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'xolox/vim-misc'
-Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'othree/html5.vim'
 Plugin 'scrooloose/syntastic'
@@ -396,15 +395,6 @@ autocmd VimEnter * EMCommandLineNoreMap \"\+gP <c-r>+
 
 map ,u :UndotreeToggle<cr>
 
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-" ~> Ultisnips
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-let g:vundle_default_git_proto = 'git'
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-autocmd Filetype html* :UltiSnipsAddFiletypes html.javascript
 
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ~> gitgutter
