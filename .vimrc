@@ -30,7 +30,6 @@ Plugin 'danro/rename.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'kelly-apollo/vim-colors-solarized'
 Plugin 'vim-scripts/CmdlineComplete'
 Plugin 'majutsushi/tagbar'
 Plugin 'mileszs/ack.vim'
@@ -215,19 +214,12 @@ endf
 
 au FileType * call OverLengthType()
 
-let g:solarized_underline = 0
-let g:solarized_bold      = 0
-let g:solarized_contrast  = "high"
-if has('gui_running')
-    set background=dark
-else
-    set background=light
-endif
-colorscheme solarized
-
 syntax on
 "render the whole file to avoid syntax mess
 autocmd BufEnter * :syntax sync fromstart
+
+colorscheme default
+hi CursorLine   cterm=NONE ctermbg=254 ctermfg=NONE
 
 " set tabline=%!MyTabLine()
 fun! MyTabLine()
