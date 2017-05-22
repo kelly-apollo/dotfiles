@@ -5,7 +5,7 @@ source ~/.config/fish/custom/shortcut.fish
 
 set -U FZF_TMUX 0
 set -gx EDITOR vim
-set -gx PATH ~/bin/ $PATH
+set -gx PATH ~/bin/ ~/.gem/ruby/2.0.0/bin $PATH
 
 function reload
     source ~/.config/fish/config.fish
