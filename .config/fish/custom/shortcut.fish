@@ -6,6 +6,10 @@ end
 # simple server in HTTP
 alias ss="python -m SimpleHTTPServer"
 
+# docker
+alias dup="docker-compose up -d"
+alias dps="docker-compose ps"
+
 # mkdir and cd to
 function mkdircd
   mkdir $argv
