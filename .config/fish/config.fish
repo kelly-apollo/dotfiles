@@ -4,9 +4,15 @@ source ~/.config/fish/custom/docker.fish
 source ~/.config/fish/custom/work.fish
 source ~/.config/fish/custom/shortcut.fish
 
+# tmux
 set -U FZF_TMUX 0
+set -gx EVENT_NOKQUEUE 1
+
 set -gx EDITOR vim
-set -gx PATH ~/bin/ ~/.gem/ruby/2.0.0/bin $PATH
+set -gx PATH ~/bin/ $PATH
+if test -d ~/.gem/ruby/2.0.0/bin
+    set -gx PATH ~/.gem/ruby/2.0.0/bin $PATH
+end
 
 function reload
     source ~/.config/fish/config.fish
@@ -41,3 +47,8 @@ function fish_prompt
   set_color normal
 end
 
+# theme
+set fish_color_search_match --background=black
+set fish_pager_color_completion black
+set fish_pager_color_prefix aaa
+set fish_pager_color_description aaa
