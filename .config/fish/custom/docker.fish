@@ -1,3 +1,5 @@
+set -gx COMPOSE_HTTP_TIMEOUT 60000
+
 alias dco="docker-compose"
 alias dup="docker-compose up -d"
 alias dps="docker-compose ps"
