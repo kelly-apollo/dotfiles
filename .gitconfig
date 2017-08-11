@@ -21,9 +21,6 @@
 [include]
   path = ~/.gitconfig.local
 
-[init]
-	templatedir = ~/.git_template
-
 [gitopen "gitlab"]
 	domain = gitlab.gizwits.com
 [color]
