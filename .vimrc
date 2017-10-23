@@ -441,6 +441,11 @@ nnoremap <Leader>tm :TableModeToggle<cr>
 nnoremap <Leader>ta :TableModeRealign<cr>
 
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" ~> vim-markdown-toc
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+let g:vmt_dont_insert_fence = 1
+
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ~> vim-choosewin
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 nmap  -  <Plug>(choosewin)
