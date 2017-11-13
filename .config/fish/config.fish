@@ -48,7 +48,7 @@ function fish_prompt
 end
 
 # theme
-set fish_color_search_match --background=black
+set fish_color_search_match --background=ededed
 set fish_pager_color_completion black
-set fish_pager_color_prefix aaa
-set fish_pager_color_description aaa
+set fish_pager_color_prefix 327dda
+set fish_pager_color_description 327dda
