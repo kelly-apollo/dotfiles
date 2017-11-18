@@ -81,6 +81,9 @@ set foldnestmax=1
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ~> Files and Buffers Editing
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+au CursorHold * checktime
+
 augroup CursorLine
   au!
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
