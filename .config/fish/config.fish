@@ -1,3 +1,7 @@
+# go
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+
 # tool
 source ~/.config/fish/custom/git.fish
 source ~/.config/fish/custom/docker.fish
