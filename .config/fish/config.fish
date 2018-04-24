@@ -5,8 +5,12 @@ set -gx PATH $PATH $GOPATH/bin
 # tool
 source ~/.config/fish/custom/git.fish
 source ~/.config/fish/custom/docker.fish
-source ~/.config/fish/custom/work.fish
 source ~/.config/fish/custom/shortcut.fish
+
+# work
+if test -e ~/Dropbox/fish/work.fish
+    source ~/Dropbox/fish/work.fish
+end
 
 # tmux
 set -U FZF_TMUX 0
