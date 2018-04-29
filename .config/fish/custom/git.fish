@@ -27,7 +27,7 @@ end
 
 function gcot
   git checkout -b $argv
-  git push -u origin (git branch ^/dev/null | grep \* | sed 's/* //')
+  git push -u origin (git branch ^/dev/null | grep \* | sed 's/* //') --no-verify
 end
 
 function gcl
