@@ -209,7 +209,7 @@ vmap ,s "9y:let @/ = '\V'.@9\|set hls<cr>
 fun! OverLengthType()
     if &ft !~ 'html\|qf'
         highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-        match OverLength /\%80v.\+/
+        match OverLength /\%120v.\+/
     else
         match none
     endif
