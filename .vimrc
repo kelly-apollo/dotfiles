@@ -223,6 +223,7 @@ autocmd BufEnter * :syntax sync fromstart
 
 colorscheme default
 hi CursorLine   cterm=NONE ctermbg=254 ctermfg=NONE
+hi Search cterm=NONE ctermfg=white ctermbg=yellow
 
 " set tabline=%!MyTabLine()
 fun! MyTabLine()
