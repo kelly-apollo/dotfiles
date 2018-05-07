@@ -39,6 +39,7 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 't9md/vim-choosewin'
 Plugin 'godlygeek/tabular'
 Plugin 'mzlogin/vim-markdown-toc'
+Plugin 'Vimjas/vim-python-pep8-indent'
 
 
 call vundle#end() 
