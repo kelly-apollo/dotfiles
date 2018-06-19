@@ -19,7 +19,10 @@ set -U FZF_TMUX 0
 set -gx EVENT_NOKQUEUE 1
 
 set -gx EDITOR vim
-set -gx PATH ~/bin/ $PATH
+
+if test -d ~/bin
+    set -gx PATH ~/bin $PATH
+end
 if test -d ~/.gem/ruby/2.0.0/bin
     set -gx PATH ~/.gem/ruby/2.0.0/bin $PATH
 end
