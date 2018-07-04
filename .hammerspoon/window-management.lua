@@ -91,13 +91,11 @@ end
 module.throwLeft = function ()
   local this = windowMeta.new()
   this.window:moveOneScreenWest()
-  module.maximizeWindow()
 end
 
 module.throwRight = function ()
   local this = windowMeta.new()
   this.window:moveOneScreenEast()
-  module.maximizeWindow()
 end
 
 module.leftHalf = function ()
