@@ -152,13 +152,13 @@ function hs.window.center(win)
   win:setFrame(f)
 end
 
-function hs.window.centerHalf(win)
+function hs.window.centerInWindow(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:fullFrame()
 
-  f.w = max.w/2
-  f.h = max.h/2
+  f.w = max.w * 0.618
+  f.h = f.w * 0.618
   f.x = max.x + ((max.w-f.w)/2)
   f.y = max.y + ((max.h-f.h)/2)
   win:setFrame(f)

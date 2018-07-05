@@ -3,8 +3,8 @@ return {
   showHelp  = false,
   trigger   = 's',
   mappings  = {
-    { {},         'return', 'centerHalf' },
-    { {},         'tab',  'center' },
+    { {},         'tab', 'centerInWindow' },
+    { {},         'return',  'center' },
     { {},         'space',  'maximize' },
     { {},         'h',      'left' },
     { {},         'j',      'down' },
