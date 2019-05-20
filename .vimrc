@@ -170,6 +170,7 @@ set showcmd
 set number
 set showtabline=1
 " mac ox GUI tabpage is nice
+set guifont=menlo:h13
 set guioptions=
 set splitright
 
@@ -177,6 +178,7 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 au FileType yaml\|html\|javascript\|css\|markdown set shiftwidth=2|set tabstop=2|set softtabstop=2
+au FileType go set noexpandtab tabstop=4 shiftwidth=4
 au FileType html\|css\|scss set iskeyword+=\-
 set expandtab
 

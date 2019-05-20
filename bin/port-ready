@@ -1,0 +1,6 @@
+#!/bin/bash
+while [ ! "$valid" ]; do 
+  valid="$(lsof -Pi :$* -sTCP:LISTEN -t)"
+  echo "waiting $* port ready..."
+  sleep 1;
+done

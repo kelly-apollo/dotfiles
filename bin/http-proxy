@@ -1,0 +1,4 @@
+#!/bin/bash
+polipo socksParentProxy=localhost:1080 &
+http_proxy=127.0.0.1:8123 https_proxy=127.0.0.1:8123 $*
+killall polipo

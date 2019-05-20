@@ -32,5 +32,5 @@ end
 
 function gcl
   git clone $argv
-  cd (basename $argv .git)
+  cd (basename $argv[1] .git)
 end

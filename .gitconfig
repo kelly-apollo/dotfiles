@@ -21,7 +21,5 @@
 [include]
   path = ~/.gitconfig.local
 
-[gitopen "gitlab"]
-	domain = gitlab.gizwits.com
 [color]
 	ui = auto

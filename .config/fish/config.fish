@@ -4,6 +4,11 @@ if test -d $HOME/go
     set -gx PATH $PATH $GOPATH/bin
 end
 
+# rabbitmq
+if test -d /usr/local/opt/rabbitmq/sbin
+    set -gx PATH $PATH /usr/local/opt/rabbitmq/sbin
+end
+
 # tool
 source ~/.config/fish/custom/git.fish
 source ~/.config/fish/custom/docker.fish
