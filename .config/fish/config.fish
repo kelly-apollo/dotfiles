@@ -28,6 +28,9 @@ set -gx EDITOR vim
 if test -d ~/bin
     set -gx PATH ~/bin $PATH
 end
+if test -d /opt/local/bin
+    set -gx PATH /opt/local/bin $PATH
+end
 if test -d ~/.gem/ruby/2.0.0/bin
     set -gx PATH ~/.gem/ruby/2.0.0/bin $PATH
 end
