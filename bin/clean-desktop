@@ -1,0 +1,21 @@
+#!/bin/bash
+
+cd ~
+archive_dir="Archive"
+if [ ! -d "$archive_dir" ]; then
+    mkdir "$archive_dir"
+fi
+
+cd "$archive_dir"
+target_dir=$(date +"%Y-%m-%d")
+if [ ! -d "$target_dir" ]; then
+    mkdir "$(date +"%Y-%m-%d")"
+fi
+cd "$target_dir"
+
+osascript -e 'display notification "Clean desktop in 5 minutes" with title "Desktop Cleaner"'
+
+sleep 300
+
+pwd
+mv ~/Desktop/* .

@@ -1,3 +1,5 @@
+set -gx PATH $PATH /opt/local/bin
+
 # go
 if test -d $HOME/go
     set -gx GOPATH $HOME/go
@@ -30,6 +32,12 @@ if test -d ~/bin
 end
 if test -d ~/.gem/ruby/2.0.0/bin
     set -gx PATH ~/.gem/ruby/2.0.0/bin $PATH
+end
+if test -d /usr/local/lib/ruby/gems/2.6.0/bin
+    set -gx PATH /usr/local/lib/ruby/gems/2.6.0/bin $PATH
+    set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
+    set -gx LDFLAGS "-L/usr/local/opt/ruby/lib"
+    set -gx CPPFLAGS "-I/usr/local/opt/ruby/include"
 end
 
 function reload
