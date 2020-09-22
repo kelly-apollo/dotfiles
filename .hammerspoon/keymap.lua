@@ -24,7 +24,7 @@ hs.hotkey.bind({}, 'F3', open('印象笔记'))
 hs.hotkey.bind({}, 'F4', open('iTerm'))
 hs.hotkey.bind({}, 'F5', open('Finder'))
 hs.hotkey.bind({}, 'F12', function()
-    hs.caffeinate.systemSleep()
+    hs.execute('pmset displaysleepnow')
 end)
 
 hs.hotkey.bind({'alt'}, 'j', stroke({'ctrl', 'shift', 'alt'}, 'j'))
