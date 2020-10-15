@@ -367,6 +367,9 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_ignore_files = ['plugin', '.json$']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["java"] }
 
 " fixed gui vim error prompter other than `bash`
 let g:syntastic_bash_hack = 0
