@@ -13,10 +13,11 @@ function stroke(modes, key)
     end
 end
 
-function strokes(text)
+function strokes(str)
     return function()
-        if type(text) == 'function' then
-            text = text()
+        local text = str
+        if type(str) == 'function' then
+            text = str()
         end
         hs.eventtap.keyStrokes(text)
     end
