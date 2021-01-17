@@ -10,6 +10,7 @@
 require "windows"
 require "keymap"
 require "volume"
+require "wechat"
 
 -- -----------------------------------------------------------------------
 --                            ** For Debug **                           --
