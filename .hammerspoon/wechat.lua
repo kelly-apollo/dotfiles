@@ -4,15 +4,15 @@ markRead = hs.hotkey.new('⌘', 'r', function()
 	posCursor = hs.mouse.getAbsolutePosition()
 
 	pos = hs.geometry.point(frame.x, frame.y)
-	pos.x = pos.x + 60 + 30
-	pos.y = pos.y + 60 + 30
+	pos.x = pos.x + frame.w - 20
+	pos.y = pos.y + frame.h / 3
 
 	hs.eventtap.leftClick(pos)
 	hs.mouse.setAbsolutePosition(posCursor)
 	hs.eventtap.keyStroke({"cmd"}, "h")
 end)
 
-function applicationWatcher(appName, eventType, appObject)
+hs.application.watcher.new(function (appName, eventType, appObject)
 	if (appName ~= "WeChat") then
 		return 
 	end
@@ -22,6 +22,4 @@ function applicationWatcher(appName, eventType, appObject)
 		markRead:disable()
 	end
 end
-
-appWatcher = hs.application.watcher.new(applicationWatcher)
-appWatcher:start()
+):start()

@@ -1,10 +1,12 @@
 function open(name)
-    return function()
-        hs.application.launchOrFocus(name)
-        if name == 'Finder' then
-            hs.appfinder.appFromName(name):activate()
-        end
+    hs.application.launchOrFocus(name)
+    if name == 'Finder' then
+        hs.appfinder.appFromName(name):activate()
     end
+end
+
+function openFn(name)
+    return function() open(name) end
 end
 
 function stroke(modes, key)
@@ -31,11 +33,18 @@ function getToday()
     return string.format("%d-%d-%d", year, month, day)
 end
 
-hs.hotkey.bind({}, 'F1', open('Google Chrome'))
-hs.hotkey.bind({}, 'F2', open('IntelliJ IDEA CE'))
-hs.hotkey.bind({}, 'F3', open('印象笔记'))
-hs.hotkey.bind({}, 'F4', open('iTerm'))
-hs.hotkey.bind({}, 'F5', open('Finder'))
+hs.hotkey.bind({}, 'F1', openFn('Google Chrome'))
+hs.hotkey.bind({}, 'F2', openFn('IntelliJ IDEA CE'))
+hs.hotkey.bind({}, 'F3', openFn('印象笔记'))
+hs.hotkey.bind({}, 'F4', openFn('iTerm'))
+hs.hotkey.bind({}, 'F5', openFn('Finder'))
+hs.hotkey.bind({'cmd', 'ctrl'}, 'w', function()
+    if hs.window.focusedWindow():application():name() == 'WeChat' then
+        hs.eventtap.keyStroke({"cmd"}, "h")
+        return
+    end
+    open('WeChat')
+end)
 hs.hotkey.bind({}, 'F12', function() hs.execute('pmset displaysleepnow') end)
 
 hs.hotkey.bind({'alt'}, 'j', stroke({'ctrl', 'shift', 'alt'}, 'j'))
