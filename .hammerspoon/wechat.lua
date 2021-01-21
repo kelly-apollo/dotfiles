@@ -1,4 +1,4 @@
-markRead = hs.hotkey.new('⌘', 'r', function()
+_markRead = function ()
 	win = hs.window.focusedWindow()
 	frame = win:frame()
 	posCursor = hs.mouse.getAbsolutePosition()
@@ -9,17 +9,27 @@ markRead = hs.hotkey.new('⌘', 'r', function()
 
 	hs.eventtap.leftClick(pos)
 	hs.mouse.setAbsolutePosition(posCursor)
+end
+
+markRead = hs.hotkey.new('⌘⇧', 'r', function()
+    _markRead()
+end)
+
+markReadHide = hs.hotkey.new('⌘', 'r', function()
+    _markRead()
 	hs.eventtap.keyStroke({"cmd"}, "h")
 end)
 
-hs.application.watcher.new(function (appName, eventType, appObject)
+_ = hs.application.watcher.new(function (appName, eventType, appObject)
 	if (appName ~= "WeChat") then
 		return 
 	end
 	if (eventType == hs.application.watcher.activated) then
 		markRead:enable()
+        markReadHide:enable()
 	elseif (eventType == hs.application.watcher.deactivated) then
 		markRead:disable()
+        markReadHide:disable()
 	end
 end
 ):start()
