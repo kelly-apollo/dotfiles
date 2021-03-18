@@ -66,7 +66,6 @@ bind generic uu status-update
 bind generic ur status-revert
 bind generic um status-merge
 bind generic ul stage-update-line
-bind generic up stage-update-part
 bind generic us stage-split-chunk
 
 bind generic c  none
