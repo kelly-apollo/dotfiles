@@ -1,3 +1,3 @@
-# Oh-my-dotfiles
+# Kelly's dotfiles
 
-✂️ cut your config
+Make config simple.
