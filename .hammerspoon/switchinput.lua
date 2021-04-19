@@ -5,7 +5,7 @@ zhongWenApps = {
 }
 
 function updateIME()
-    local name = hs.window.focusedWindow():application():name()
+    local name = hs.window.frontmostWindow():application():name()
     for k, app in pairs(zhongWenApps) do
         if name == app then
             hs.keycodes.currentSourceID("com.apple.inputmethod.SCIM.ITABC")
@@ -17,7 +17,7 @@ end
 
 -- Handle cursor focus and application's screen manage.
 function applicationWatcher(appName, eventType, appObject)
-    if (eventType == hs.application.watcher.activated) then
+    if (eventType == hs.application.watcher.activated or eventType == hs.application.watcher.launched) then
         updateIME()
     end
 end
