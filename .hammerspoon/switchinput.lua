@@ -1,6 +1,5 @@
 zhongWenApps = {
     'WeChat',
-    '印象笔记',
     'Notes',
     'Reminders',
 }
