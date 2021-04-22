@@ -1,18 +1,22 @@
-zhongWenApps = {
+Pinyin = {
     'WeChat',
     'Notes',
     'Reminders',
+    'Cornerstone',
+    'Microsoft Word',
+    'Microsoft Excel',
+    'Microsoft Outlook',
 }
 
 function updateIME()
     local name = hs.window.frontmostWindow():application():name()
-    for k, app in pairs(zhongWenApps) do
+    for k, app in pairs(Pinyin) do
         if name == app then
-            hs.keycodes.currentSourceID("com.apple.inputmethod.SCIM.ITABC")
+            hs.keycodes.setMethod('Pinyin - Simplified')
             return
         end
     end
-    hs.keycodes.currentSourceID("com.apple.keylayout.ABC")
+    hs.keycodes.setLayout('ABC')
 end
 
 -- Handle cursor focus and application's screen manage.

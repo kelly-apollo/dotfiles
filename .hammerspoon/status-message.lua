@@ -1,3 +1,5 @@
+-- https://github.com/jasonrudolph/keyboard/tree/main/hammerspoon
+
 local drawing = require 'hs.drawing'
 local geometry = require 'hs.geometry'
 local screen = require 'hs.screen'
@@ -10,6 +12,7 @@ statusmessage.new = function(messageText)
 
     local styledTextAttributes = {
       font = { name = 'Monaco', size = 20 },
+      color = { red = 255, green = 255, blue = 255},
     }
 
     local styledText = styledtext.new(messageText, styledTextAttributes)
