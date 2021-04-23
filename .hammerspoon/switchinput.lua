@@ -28,3 +28,21 @@ end
 
 appWatcher = hs.application.watcher.new(applicationWatcher)
 appWatcher:start()
+
+
+timer = nil
+function test(i)
+    print(i)
+    i = i - 1
+    if (i == 0) then
+        return
+    end
+
+    hs.eventtap.keyStroke({'cmd'}, 'tab', 0)
+    hs.eventtap.keyStroke({}, 'cmd')
+    timer = hs.timer.delayed.new(0.01, function()
+        test(i)
+    end)
+    timer:start()
+end
+hs.hotkey.bind({'alt'}, 't', function() test(200) end)

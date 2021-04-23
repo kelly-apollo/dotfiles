@@ -21,15 +21,15 @@ markReadHide = hs.hotkey.new('⌘', 'r', function()
 end)
 
 _ = hs.application.watcher.new(function (appName, eventType, appObject)
-	if (appName ~= "WeChat") then
-		return 
-	end
-	if (eventType == hs.application.watcher.activated) then
-		markRead:enable()
+    if (appName ~= "WeChat") then
+        return
+    end
+    if (eventType == hs.application.watcher.activated) then
+        markRead:enable()
         markReadHide:enable()
-	elseif (eventType == hs.application.watcher.deactivated) then
-		markRead:disable()
+    elseif (eventType == hs.application.watcher.deactivated) then
+        markRead:disable()
         markReadHide:disable()
-	end
+    end
 end
 ):start()
