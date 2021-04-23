@@ -39,7 +39,7 @@ hs.hotkey.bind({}, 'F3', openFn('印象笔记'))
 hs.hotkey.bind({}, 'F4', openFn('iTerm'))
 hs.hotkey.bind({}, 'F5', openFn('Finder'))
 hs.hotkey.bind({'cmd', 'ctrl'}, 'w', function()
-    if hs.window.focusedWindow():application():name() == 'WeChat' then
+    if hs.window.frontmostWindow():application():name() == 'WeChat' then
         hs.eventtap.keyStroke({"cmd"}, "h")
         return
     end
