@@ -32,7 +32,6 @@ Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vim-scripts/CmdlineComplete'
 Plugin 'majutsushi/tagbar'
-Plugin 'mileszs/ack.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mattn/emmet-vim'
 Plugin 'dhruvasagar/vim-table-mode'
@@ -40,7 +39,7 @@ Plugin 't9md/vim-choosewin'
 Plugin 'godlygeek/tabular'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'Vimjas/vim-python-pep8-indent'
-
+Plugin 'dyng/ctrlsf.vim'
 
 call vundle#end() 
 " Vundle end
@@ -410,25 +409,6 @@ map ,u :UndotreeToggle<cr>
 let g:gitgutter_max_signs = 1000
 
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-" ~> Ack.vim
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-noremap  <space>/ :AckW!<space>
-noremap  <space>; :Ack!<space> <c-r><c-w><cr>
-
-let g:ack_mappings = {
-      \ "t": "<C-W><CR><C-W>T",
-      \ "T": "<C-W><CR><C-W>TgT<C-W>j",
-      \ "o": "<CR>",
-      \ "O": "<CR>:cclose<CR>",
-      \ "go": "<CR><C-W>p",
-      \ "h": "<C-W><CR><C-W>K",
-      \ "H": "<C-W><CR><C-W>K<C-W>b",
-      \ "v": "<C-W><CR><C-W>L<C-W>b<C-W>J<C-W>p",
-      \ "V": "<C-W><CR><C-W>L<C-W>p<C-W>c<C-W>p",
-      \ "gv": "<C-W><CR><C-W>L<C-W>b<C-W>J" }
-
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ~> CtrlP
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -494,3 +474,18 @@ augroup TabClosed
                 \       |endif
                 \       |let s:prevtabnum=tabpagenr('$')
 augroup END
+
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" ~> ctrlsf.vim
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+let g:ctrlsf_auto_focus = {
+    \ "at": "start"
+    \ }
