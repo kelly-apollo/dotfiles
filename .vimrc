@@ -419,6 +419,12 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|pyc)$'
   \ }
 let g:ctrlp_working_path_mode = 'rw'
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
+  \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
+  \ 'PrtHistory(-1)':       ['<down>'],
+  \ 'PrtHistory(1)':        ['<up>'],
+  \ }
 
 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " ~> delimitMate

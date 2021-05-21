@@ -34,10 +34,12 @@ function getToday()
 end
 
 hs.hotkey.bind({}, 'F1', openFn('Google Chrome'))
-hs.hotkey.bind({}, 'F2', openFn('IntelliJ IDEA CE'))
+-- hs.hotkey.bind({}, 'F2', openFn('IntelliJ IDEA CE'))
 hs.hotkey.bind({}, 'F3', openFn('印象笔记'))
 hs.hotkey.bind({}, 'F4', openFn('iTerm'))
 hs.hotkey.bind({}, 'F5', openFn('Finder'))
+hs.hotkey.bind({'alt'}, '1', openFn('MacVim'))
+
 hs.hotkey.bind({'cmd', 'ctrl'}, 'w', function()
     if hs.window.frontmostWindow():application():name() == 'WeChat' then
         hs.eventtap.keyStroke({"cmd"}, "h")
